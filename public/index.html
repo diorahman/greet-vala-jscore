@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Hello</title>
+</head>
+<body>
+  
+  <div>
+    <input id="input" value="Kismis">
+    <button id="button">Greet!</button>
+  </div>
+
+  <div>
+    Hello <span id="name"></span>
+  </div>
+
+  <script type="text/javascript">
+    
+    var app = new App();
+    
+    document.getElementById('button').onclick = function(){
+      
+      var creature = { name : document.getElementById('input').value};
+
+      app.hello(creature, function(err, greet){
+        var name = document.getElementById('name');
+        name.innerText = greet.name;
+      })  
+    }
+  </script>
+  
+</body>
+</html>
