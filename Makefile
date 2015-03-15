@@ -10,7 +10,7 @@ XFLAGS = -X -I/usr/include/webkitgtk-3.0
 
 all: hello
 
-hello: 
+hello: main.vala page.vala util.vala
 	valac $(VALAFLAGS) --header=hello.h --vapi=hello.vapi $(XFLAGS) $(SOURCES) -o hello
 
 clean:
